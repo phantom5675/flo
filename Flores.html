@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunflower</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e1e1e;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            position: relative;
+            background-color: #fffae3;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            width: 90%; /* Cambiado a porcentaje para que sea responsivo */
+            max-width: 400px; /* Máximo ancho para pantallas grandes */
+            height: auto; /* Altura automática para adaptarse al contenido */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .sunflower {
+            width: 50%; /* Reducido el tamaño para móviles */
+            max-width: 100px; /* Tamaño máximo para pantallas grandes */
+            margin-top: 20px;
+        }
+        .text {
+            font-size: 20px; /* Reducido el tamaño de la fuente para móviles */
+            font-family: "Arial", sans-serif;
+            font-weight: bold;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Estilos para pantallas pequeñas (móviles) */
+        @media (max-width: 600px) {
+            .container {
+                width: 80%; /* Ajuste adicional para móviles */
+                padding: 15px;
+            }
+            .text {
+                font-size: 18px; /* Tamaño de fuente más pequeño para móviles */
+            }
+            .sunflower {
+                width: 40%; /* Tamaño más pequeño para móviles */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="text">I Love You ❤️</p>
+        <img class="sunflower" src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_sky_backdrop.jpg" alt="Sunflower">
+    </div>
+</body>
+</html>
